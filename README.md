@@ -1,4 +1,4 @@
-<a href="https://www.buymeacoffee.com/metimol" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/metimol"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee :)&emoji=&slug=metimol&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 ### Hello everyone!
 
