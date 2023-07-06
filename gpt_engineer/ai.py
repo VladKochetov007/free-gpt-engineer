@@ -4,7 +4,7 @@ import logging, requests, json
 logger = logging.getLogger(__name__)
 
 class AI:
-    url = "https://gpt4.gravityengine.cc"
+    url = "https://gpt4.xunika.uk"
     arguments = "/api/openai/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
 
