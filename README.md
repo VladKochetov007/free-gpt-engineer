@@ -9,20 +9,11 @@ It **absolutely FREE.** You don't need to using Openai API Key.
 
 This project based on the [GPT-Engineer repository](https://github.com/AntonOsika/gpt-engineer), version **0.0.7**
 
-## Project philosophy
-- Simple to get value
-- Flexible and easy to add new own "AI steps". See `steps.py`.
-- Incrementally build towards a user experience of:
-  1. high level prompting
-  2. giving feedback to the AI that it will remember over time
-- Fast handovers back and forth between AI and human
-- Simplicity, all computation is "resumable" and persisted to the filesystem
-
 ## Usage
 
 For installing **Free-GPT-Engineer** run this commands:
-- `git clone https://github.com/arkadawa/free-gpt-engineer-manager.git`
-- `cd free-gpt-engineer-manager`
+- `git clone https://github.com/metm0l/free-gpt-engineer.git`
+- `cd free-gpt-engineer`
 - `pip install -r requirements.txt`
 
 
