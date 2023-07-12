@@ -12,7 +12,7 @@ This project based on the [GPT-Engineer repository](https://github.com/AntonOsik
 ## Usage
 
 For installing **Free-GPT-Engineer** run this commands:
-- `git clone https://github.com/metm0l/free-gpt-engineer.git`
+- `git clone https://github.com/metim0l/free-gpt-engineer.git`
 - `cd free-gpt-engineer`
 - `pip install -r requirements.txt`
 
