@@ -218,11 +218,6 @@ if __name__ == '__main__':
 
     sys.exit(app.exec_())
 
-#https://github.com/arkadawa
-
-
-
-
 
 image_image_2 = PhotoImage(
     file=relative_to_assets("image_2.png"))

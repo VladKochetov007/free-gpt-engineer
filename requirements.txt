@@ -8,3 +8,4 @@ typer==0.9.0
 rudder-sdk-python == 2.0.2
 dataclasses-json == 0.5.7
 PyQt5 == 5.15.9
+openai

@@ -1,45 +1,13 @@
 from __future__ import annotations
-import logging, requests, json
+import logging, requests, json, openai
 
 logger = logging.getLogger(__name__)
 
 class AI:
-    url = "https://ai.chatgpt.org.uk"
-    arguments = "/api/openai/v1/chat/completions"
-    headers = {"Content-Type": "application/json"}
-
-    def __init__(self, model="gpt-3.5-turbo", temperature=0.1):
+    def __init__(self, api_key, temperature=0.1):
         self.temperature = temperature
-        if model!="gpt-3.5-turbo":
-            print(f"Model {model} not available, sorry. Currently you use GPT-3.5-Turbo")
-            self.model = "gpt-3.5-turbo"
-
-    def process_text(self, text):
-        data = text.text
-        data_json = json.loads(data)
-        if "choices" in data_json:
-            choices = data_json["choices"]
-            for choice in choices:
-                if "message" in choice and "content" in choice["message"]:
-                    content = choice["message"]["content"]
-                    return content
-                else:
-                    return "Error. GPT-3.5-Turbo don't work."
-        else:
-            return "Error. GPT-3.5-Turbo don't work."
-
-
-    def call(self, messages, temperature) -> str:
-        data = {
-            "model": "gpt-3.5-turbo",
-            "temperature": temperature,
-            "messages": messages
-        }
-
-        endpoint = self.url + self.arguments
-        with requests.post(url=endpoint, headers=self.headers, json=data) as response:
-            msg = self.process_text(response)
-            return msg
+        openai.api_base = "https://api.chatanywhere.cn/v1"
+        openai.api_key = api_key
 
     def start(self, system, user):
         messages = [
@@ -63,14 +31,22 @@ class AI:
             messages += [{"role": "user", "content": prompt}]
 
         logger.debug(f"Creating a new chat completion: {messages}")
-        response = self.call(
+        response = openai.ChatCompletion.create(
             messages=messages,
+            stream=True,
+            model="gpt-3.5-turbo",
             temperature=self.temperature,
         )
 
-        print(response)
+        chat = []
+        for chunk in response:
+            delta = chunk["choices"][0]["delta"]
+            msg = delta.get("content", "")
+            print(msg, end="")
+            chat.append(msg)
+
         print()
-        messages += [{"role": "assistant", "content": response}]
+        messages += [{"role": "assistant", "content": "".join(chat)}]
         logger.debug(f"Chat completion finished: {messages}")
         return messages
 

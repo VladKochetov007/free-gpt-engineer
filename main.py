@@ -36,9 +36,13 @@ def main(
         shutil.rmtree(memory_path, ignore_errors=True)
         shutil.rmtree(workspace_path, ignore_errors=True)
 
+    with open("key.json") as file:
+        data = json.load(file)
+        api_key = data["api_key"]
+
     ai = AI(
-        model=model,
         temperature=temperature,
+        api_key=api_key
     )
 
     dbs = DBs(

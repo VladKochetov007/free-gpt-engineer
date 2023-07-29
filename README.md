@@ -15,6 +15,8 @@ For installing **Free-GPT-Engineer** run this commands:
 - `git clone https://github.com/metim0l/free-gpt-engineer.git`
 - `cd free-gpt-engineer`
 - `pip install -r requirements.txt`
+- Open [this website](https://api.chatanywhere.cn/v1/oauth/free/github/render) and login with your GitHub account.
+- Open file `key.json` and paste API key from website to `api_key` variable.
 
 
 **RUN WITH FRONTEND** (Tested on Ubuntu 22.04.2 LTS)
