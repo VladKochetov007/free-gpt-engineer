@@ -35,3 +35,7 @@ For installing **Free-GPT-Engineer** run this commands:
 
 **Results**
 - Check the generated files in `projects/my-new-project/workspace`
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Metim0l/free-gpt-engineer&type=Date)](https://star-history.com/#Metim0l/free-gpt-engineer&Date)
